@@ -13,6 +13,7 @@ public class IOUtils {
      * @throws IOException
      */
     public static String readData(BufferedReader br, int contentLength) throws IOException {
+        // BufferedReader를 읽은 만큼 마킹이 되어있어서 바로 바디를 읽을 수 있음
         char[] body = new char[contentLength];
         br.read(body, 0, contentLength);
         return String.copyValueOf(body);
